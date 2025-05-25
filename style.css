@@ -1,0 +1,653 @@
+/* kisi bhi website ka font uthane k liya network ph jao fon ph jao and then refresh and then download  */
+/* then convert downloaaded font to TTf from WOff2 y google*/
+/* phir jis folder mein chaiya usmein daldo and click karo uspe install ka option ayega phir isnatll karlo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: "Plain Light";
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* for cursor */
+/* .crsr {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: fixed;
+    border: 1px solid #ffffffad;
+    z-index: 99999;
+    mix-blend-mode: difference;
+    
+    transform: translate(-50%, -50%);/*takijisbhielementkpassjayeththodacolordifferencehojaye(takidikheelementkupar)*/
+/* } */
+.mousefollower{
+    border: 2px solid #fff;
+    background-color: rgb(255, 255,255);
+    scale: 2;
+    mix-blend-mode: difference;
+}
+
+#loader {
+    height: 100%;
+    background-color: #000000;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+    padding: 25vh 10vw;
+}
+
+.line {
+    /* background-color: red; */
+    height: fit-content;
+    overflow: hidden;
+    /*taki ata hua baki k ek sath na dikhein lage ki ikdm seh aye hn*/
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vw;
+
+    h2 {
+        font-size: 5vw;
+        text-transform: uppercase;
+        font-weight: 900;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        opacity: 0;
+    }
+}
+
+.line1-part1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1vw;
+
+    & h5,
+    h6 {
+        font-size: 3vw;
+        font-family: "silk serif";
+        font-weight: 300;
+    }
+}
+
+@keyframes anime {
+    0% {
+        font-family: "Plain Light";
+        -webkit-text-stroke: 1px #fff;
+        /*text k upar border banane k liye*/
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    48% {
+        font-family: "Plain Light";
+        -webkit-text-stroke: 1px #fff;
+        /*text k upar border banane k liye*/
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+
+    50% {
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;
+        /*text k upar border banane k liye*/
+        color: transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    100% {
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;
+        /*text k upar border banane k liye*/
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
+}
+
+.line1-part1 h5 {
+    width: 5vw;
+    /* background-color: red; */
+    text-align: right;
+}
+
+/* #line1-part1 h5, #line1-part1 h6{
+    font-size: 4vw;
+} */
+.line h1 {
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.main {
+    position: relative;
+    background-color: #1b1b1b;
+}
+
+#page1 {
+    width: 100%;
+    height: 90vh;
+    /* background-color: #242323; */
+    position: relative;
+    z-index: 999;
+
+    & #nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2.3vw 5.5vw;
+
+        & #nav-part2 {
+            display: flex;
+            gap: 2vw;
+            justify-content: center;
+            align-items: center;
+
+            & h4 {
+                font-weight: 600;
+                font-size: 0.8vw;
+            }
+        }
+    }
+}
+
+.hero:nth-child(2) {
+    /*humlog ko phele child ko target karna par hum 2 isliya likh rahe hn kyunki yh css ka ek bug h ,jb 2 likhte hn wh 1 child ko target karta h*/
+    margin-top: 18vh;
+
+}
+
+
+.hero {
+    /* background-color: red; */
+    width: 71%;
+    margin-left: 28%;
+    height: fit-content;
+    overflow: hidden;
+
+    & h1 {
+        font-size: 7.2vw;
+        font-weight: 600;
+        text-transform: capitalize;
+        line-height: 7.2vw;
+        font-family: "plain light";
+        text-transform: uppercase;
+    }
+
+    & h2 {
+        font-size: 7.2vw;
+        font-weight: 600;
+        text-transform: capitalize;
+        line-height: 7.2vw;
+        font-family: "plain light";
+        text-transform: uppercase;
+        border-bottom: 0.5vw solid #fff;
+        padding-bottom: 0.7vw;
+    }
+}
+
+#hero3 {
+    display: flex;
+    align-items: center;
+    transition: all ease 0.3s;
+
+    & h2:hover {
+        -webkit-text-stroke: 1px #fff;
+        /* yh isliya jb humne hover ki th wh black line andar dikhegi*/
+        color: transparent;
+        font-weight: 500;
+        border-bottom: 0.5vw solid transparent;
+    }
+}
+#hero1::before{
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: 20% ;
+    top:31%;
+}
+#flag-img{
+    height: 23vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+#hero3{
+    position: relative;
+    z-index: 999;
+}
+
+#page2 {
+    width: 100%;
+    height: 100vh;
+    padding-top: 17vh;
+    position: relative;
+    overflow: hidden;
+
+    & .video-container {
+        height: 66vh;
+        width: 70vw;
+        position: relative;
+        left: 29%;
+        /* background-color: red; */
+        /* background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg); */
+
+        & video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+            /* top: 0; */
+        }
+
+        & #video-crsr {
+            background-color: #FFA63D;
+            width: 8.4vw;
+            height: 8.4vw;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            position: absolute;
+            top: -11%;
+            left: 85%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+
+            & i {
+                font-size: 2vw;
+            }
+        }
+    }
+}
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: #323030; */
+    position: relative;
+    padding: 7vh 2vw;
+    overflow: hidden;
+    margin-bottom: 15vh;
+    & h1{
+        font-size: 7vw;
+        text-transform: uppercase;
+        position: relative;
+        margin-left: 28vw;
+    }
+    & .underline {
+        height: 1px;
+        width: 100%;
+        background-color: #fff;
+        margin-left: 28vw;
+    }
+    & #image-div-container{
+        padding: 1vw;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 2vw;
+        
+        
+        & .page3-circle1{
+            height: 23vw;
+            width: 23vw;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20vh;
+            margin-left: 10vw;
+            & svg{
+                height: 30%;
+            }
+            position: relative;
+            /* overflow: hidden; */
+        }
+        & .page3-circle2{
+            height: 23vw;
+            width: 23vw;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            /* overflow: hidden; */
+            & svg{
+                height: 30%;
+                rotate: -45deg;
+            }
+        }
+    }
+}
+._canvas_container{/*yh likhna jaruri h warna image wala animation dikhega*/
+    z-index: 999 !important;
+    pointer-events: none;
+}
+.image-div{
+    width: 27vw;
+    height: 37vw;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+.one-img{
+    height: 28vw;
+    width: 25vw;
+    /* background-color: red; */
+    
+}
+.circle-in{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    scale: 0;
+    transition: all ease 0.4s;
+    & p{
+        font-size: 0.9vw;
+        text-transform: capitalize;
+        color: black;
+        width: 65%;
+        font-weight: 600; 
+        scale: 0;
+        transition: all ease 0.4s;
+        transition-delay: 0.32s;
+        opacity: 0;
+    }
+    
+}
+.page3-circle1:hover .circle-in{
+    scale: 1;
+}
+.page3-circle1:hover p{
+    scale: 1;
+    opacity: 1;
+}
+.page3-circle2:hover .circle-in{
+    scale: 1;
+}
+.page3-circle2:hover p{
+    scale: 1;
+    opacity: 1;
+}
+#page3 h1::before{
+    content: "02";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12% ;
+    top:0.5%;
+}
+
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: #323030; */
+    position: relative;
+    padding-top: 7vh 0;
+
+    & #page4-content {
+        position: relative;
+        width: 71vw;
+        left: 28%;
+
+        & h1 {
+            font-size: 7vw;
+            text-transform: uppercase;
+        }
+
+
+        & #page4-flex {
+            display: flex;
+
+            & img {
+                width: 48%;
+            }
+
+            & p {
+                font-size: 0.9vw;
+                width: 17%;
+            }
+        }
+
+        & .blue-div {
+            background-color: #3F7DF4;
+            width: 33vw;
+            padding: 3vw;
+            position: relative;
+            margin-top: -37vh;
+            margin-left: 25vw;
+
+            & .blue-div-elem {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding: 1.5vw 0;
+                border-bottom: 2px solid #ffffff94;
+
+                & p {
+                    width: 50%;
+                    font-size: 0.9vw;
+                    font-weight: 400;
+                }
+
+                & h4 {
+                    font-size: 1.4vw;
+                    font-weight: 500;
+                }
+            }
+
+
+        }
+    }
+}
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12% ;
+    top:0.5%;
+}
+
+#page4-content>p {
+    /*page4-content ke andar k direct paragraph ko target karna*/
+    font-size: 2.05vw;
+    width: 50%;
+    margin-bottom: 3vw;
+}
+
+.underline {
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin: 5vw 0;
+}
+
+#page5 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    
+
+    & .elem {
+        /* background-color: red; */
+        white-space: nowrap;
+        /*for moving text k liya yh sara jhamela karna h*/
+        overflow-x: hidden;
+        margin-bottom: 1vw;
+        
+
+        & h1 {
+            font-size: 7vw;
+            -webkit-text-stroke: 1px #fff;
+            font-weight: 400;
+            text-transform: capitalize;
+            color: transparent;
+            display: inline-block;
+            margin-right: 1.6rem;
+            /*background-color: #FFA63D;*/
+            animation-name: movinganime;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+        }
+
+        
+    }
+    & .elem2 {
+        white-space: nowrap;
+        /*for moving text k liya yh sara jhamela karna h*/
+        overflow-x: hidden;
+        margin-bottom: 1vw;
+
+        & h1 {
+            font-size: 7vw;
+            -webkit-text-stroke: 1px #fff;
+            font-weight: 400;
+            text-transform: capitalize;
+            color: transparent;
+            display: inline-block;
+            margin-right: 1.6rem;
+            transform: translateX(calc(-100% -20px));
+            animation-name:movinganime;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-direction: reverse;
+           
+}
+    }
+}
+
+
+@keyframes movinganime {
+    from {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% -20px));
+        /*arithmeticcalckartahclactkijhjaghachuthrahithienachute*/
+        -webkit-transform: translateX(calc(-100%- 20px));
+        -moz-transform: translateX(calc(-100% - 20px));
+        -ms-transform: translateX(calc(-100% - 20px));
+        -o-transform: translateX(calc(-100% - 20px));
+        -webkit-transform: translateX(calc(-100% - 20px));
+    }
+
+}
+.elem span,.elem2 span{
+    font-style: italic;
+    font-family: "silk serif";
+    color: transparent;
+}
+#footer{
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    padding-left: 27vw;
+    margin-top: 5vw;
+    padding-right: 2vw;
+    
+    & h1{
+        font-size: 8vw;
+        text-transform: uppercase;
+        position: relative;
+        
+    }
+    & .underline{
+        height: 2px;
+        width: 100%;
+    }
+    & .footer-div{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-right: 12vw;
+        padding-top: 2vw;
+        & .box{
+            width: 27%;
+        }
+        & h6{
+            font-size: 1vw;
+            margin-bottom: 1.2vw;
+            text-transform: capitalize;
+            font-weight: 300;
+        }
+        & h5{
+            font-size: 1.2vw;
+            font-weight: 500;
+            margin: 0.2vh 0;
+            text-transform: capitalize;
+        }
+    }
+}
+#footer>h5{
+    font-weight: 500;
+    font-size: 1vw;
+    margin-top: -4vh;
+}
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12% ;
+    top:8%;
+}
